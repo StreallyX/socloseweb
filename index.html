@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SoClose – Crée ta chasse au trésor</title>
-  <meta name="description" content="SoClose : des chasses IRL & informatiques. GPS, QR, gestes, audio, pages secrètes. Construis ton scénario et fais vibrer ta ville." />
+  <title>SoClose – La chasse au trésor réinventée</title>
+  <meta name="description" content="SoClose : des chasses au trésor qui mélangent réflexion, observation et action. Cartes, images calquées, croix rouges, sons à décoder, pages secrètes.">
   <link rel="stylesheet" href="style.css" />
-  <!-- Leaflet (cartes & démo studio) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <a class="brand" href="#top">
-        <img src="img/logo.png" alt="Logo SoClose" class="brand-logo" />
+        <img src="img/logo-nobg.png" alt="Logo SoClose" class="brand-logo" />
         <span class="brand-name">SoClose</span>
       </a>
       <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">☰</button>
       <nav class="site-nav" id="siteNav">
         <a href="#hero">Intro</a>
-        <a href="#creer">Créer ta chasse</a>
-        <a href="#studio">Studio (démo)</a>
-        <a href="#mecaniques">Mécaniques folles</a>
-        <a href="#triggers">Triggers & Effects</a>
+        <a href="#map-demo">Carte simple</a>
+        <a href="#paris-demo">Carte Paris</a>
+        <a href="#montagne-demo">Montagne overlay</a>
+        <a href="#belle-montagne">Montagne</a>
+        <a href="#not-only-run">Expériences</a>
+        <a href="#triggers">L’étincelle</a>
         <a href="#formats">Formats & Prizes</a>
         <a href="#contact" class="btn">Nous suivre</a>
       </nav>
@@ -34,140 +33,79 @@
   <section class="hero" id="hero">
     <div class="container grid-2">
       <div class="hero-visual">
-        <img src="img/logo.png" alt="Logo SoClose" class="hero-logo reveal" />
+        <img src="img/logo-nobg.png" alt="Logo SoClose" class="hero-logo reveal" />
       </div>
       <div class="hero-copy">
-        <h1 class="gold reveal">Tu imagines. Les autres vivent l’aventure.</h1>
+        <h1 class="gold reveal">SoClose : la chasse au trésor réinventée</h1>
         <p class="lead reveal">
-          <b>SoClose</b> est une chasse au trésor moderne : des zones GPS qui s’allument, des QR qui déverrouillent,
-          des <em>gestes</em> qui révèlent un son, des <em>sons</em> qui cachent un code… et des <b>pages secrètes</b> qui n’attendent que toi.
+          Ici, la <b>réflexion</b> compte autant que l’action : cartes à décoder, indices à superposer, sons à analyser, 
+          lieux à atteindre. <br>Le trésor n’attend que toi.
         </p>
-        <div class="hero-cta reveal">
-          <a href="#creer" class="btn">Créer une chasse</a>
-          <a href="#studio" class="btn btn-ghost">Tester la carte</a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- CREER TA CHASSE -->
-  <section class="section" id="creer">
+  <!-- CARTE PARIS -->
+  <section class="section alt" id="paris-demo">
     <div class="container narrow">
-      <h2 class="section-title gold reveal">Comment on crée ? Simple et puissant.</h2>
+      <h2 class="section-title gold reveal">Exemple — Une chasse en plein Paris</h2>
+      <p class="reveal">Et si trois indices te menaient… au cœur de la capitale ?</p>
+      <div class="map-illustration reveal">
+        <img src="img/treasure-map-paris.png" alt="Carte de Paris avec points vers un trésor" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BELLE MONTAGNE -->
+  <section class="section alt" id="belle-montagne">
+    <div class="container narrow">
+      <h2 class="section-title gold reveal">Exemple 3 — Le décor te parle</h2>
+      <p class="reveal">Une belle montagne… et peut-être que la nature elle-même cache l’indice.</p>
+      <div class="map-illustration reveal">
+        <img src="img/montagne-belle.png" alt="Belle montagne" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PAS SEULEMENT COURIR -->
+  <section class="section" id="not-only-run">
+    <div class="container narrow">
+      <h2 class="section-title gold reveal">Ce n’est pas “juste courir”</h2>
       <div class="cards">
-        <article class="card reveal">
-          <div class="icon">📍</div>
-          <h3>Place des zones</h3>
-          <p>Choisis des coordonnées GPS (lat/lng) et un rayon. Quand le joueur entre, <b>quelque chose se passe</b>.</p>
-        </article>
         <article class="card reveal">
           <div class="icon">🧩</div>
-          <h3>Ajoute des indices</h3>
-          <p>Overlays de carte, QR à scanner, énigmes à saisir, timers… combine-les.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🌀</div>
-          <h3>Déclenche par des gestes</h3>
-          <p>Secoue le téléphone → un son joue. Dans le son : un <b>code</b> à trouver (spectrogramme, morse, DTMF).</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🔒</div>
-          <h3>Déverrouille des secrets</h3>
-          <p>Le code ouvre une <b>page secrète</b> de SoClose. Et là, nouvelle étape… ou jackpot 💰.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- STUDIO DEMO -->
-  <section class="section alt" id="studio">
-    <div class="container">
-      <h2 class="section-title gold reveal">Studio SoClose (démo) — Trace, mesure, imagine</h2>
-      <div class="studio-grid">
-        <div class="studio-controls reveal">
-          <label>Lat</label>
-          <input id="lat" type="number" step="0.000001" placeholder="48.858370">
-          <label>Lng</label>
-          <input id="lng" type="number" step="0.000001" placeholder="2.294481">
-          <label>Rayon (m)</label>
-          <input id="radius" type="number" step="1" placeholder="60">
-          <div class="studio-buttons">
-            <button id="addZone" class="btn">+ Zone</button>
-            <button id="addPoint" class="btn btn-ghost">+ Point (chemin)</button>
-            <button id="clear" class="btn btn-ghost">Effacer</button>
-          </div>
-          <div class="metrics">
-            <div><span class="m-label">Zones</span><span class="m-val" id="mZones">0</span></div>
-            <div><span class="m-label">Points</span><span class="m-val" id="mPts">0</span></div>
-            <div><span class="m-label">Distance</span><span class="m-val" id="mDist">0 km</span></div>
-          </div>
-          <p class="hint">Pose une zone (ex: Tour Eiffel) puis des points pour imaginer un trajet.<br/>Tout ça devient une étape SoClose.</p>
-        </div>
-        <div class="studio-map reveal">
-          <div id="studioMap"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MECANIQUES FOLLES -->
-  <section class="section" id="mecaniques">
-    <div class="container narrow">
-      <h2 class="section-title gold reveal">Ce n’est pas “juste une boussole”</h2>
-      <div class="cards">
-        <article class="card reveal">
-          <div class="icon">🔊</div>
-          <h3>Son → Code</h3>
-          <p>Un jingle cache un message. Analyse-le et entre le code sur une page secrète pour continuer.</p>
+          <h3>Énigmes & déductions</h3>
+          <p>Des devinettes, des fragments d’indices, des liens à faire entre cartes & images.</p>
         </article>
         <article class="card reveal">
           <div class="icon">🖼️</div>
-          <h3>Stéganographie</h3>
-          <p>Indices dans les images (EXIF/LSB), dans les headers réseau, voire… dans le manifest.</p>
+          <h3>Images & calques</h3>
+          <p>Superpose un calque sur une photo, aligne les crêtes, repère la croix — et avance.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">🎮</div>
-          <h3>Combo d’actions</h3>
-          <p>Secousse + QR + heure précise = révélation instantanée. À toi d’inventer la recette.</p>
+          <div class="icon">🔊</div>
+          <h3>Audio à décoder</h3>
+          <p>Un son peut cacher un code pour ouvrir une page secrète.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">💻</div>
-          <h3>Chasse informatique</h3>
-          <p>Indices dans le code source, un repo Git, un binaire… L’aventure peut être 100% digitale.</p>
+          <div class="icon">🏁</div>
+          <h3>Action ciblée</h3>
+          <p>Oui, parfois il faut atteindre une zone précise, scanner un QR ou toucher un objet.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- TRIGGERS & EFFECTS -->
+  <!-- TRIGGERS -->
   <section class="section" id="triggers">
     <div class="container narrow">
-      <h2 class="section-title gold reveal">Triggers → Effects (l’étincelle du jeu)</h2>
-      <p class="reveal">Une règle relie un <em>Trigger</em> (déclencheur) à un ou plusieurs <em>Effects</em> (réactions).</p>
-      <div class="rules-grid">
-        <div class="rule-card reveal">
-          <h3>Triggers</h3>
-          <ul>
-            <li><b>onLocation</b> (entrée zone, distance &lt; X m, cap exact)</li>
-            <li><b>onQRCode</b>, <b>onInput</b>, <b>onTime</b></li>
-            <li><b>onShake</b> (secousse), <b>onToolOpen</b> (boussole/carte/QR/audio)</li>
-            <li><b>onAudio</b> (analyse/validation d’un motif sonore)</li>
-          </ul>
-        </div>
-        <div class="rule-card reveal">
-          <h3>Effects</h3>
-          <ul>
-            <li><b>showOverlay</b> (indice image sur la carte)</li>
-            <li><b>activateTool</b>, <b>playAudio</b>, <b>changeColorCompass</b></li>
-            <li><b>unlockStep</b>, <b>award</b>, <b>openSecretPage</b></li>
-          </ul>
-        </div>
-      </div>
+      <h2 class="section-title gold reveal">L’étincelle : Triggers → Effects</h2>
+      <p class="reveal">Une action déclenche une réaction :</p>
       <div class="rule-example reveal">
-        <pre><code>onShake()             → playAudio("hint.wav")
-onAudio("spectre42")  → openSecretPage("/secret?key=42")
-onLocation(Zone A)    → showOverlay("indice.png")
-onQRCode("SC-77")     → unlockStep(3)</code></pre>
+        <pre><code>Entrer dans une zone  → Affiche un indice
+Scanner un QR        → Débloque l’étape suivante
+Secouer le téléphone → Joue un son
+Entrer un code       → Ouvre une page secrète</code></pre>
       </div>
     </div>
   </section>
@@ -175,11 +113,12 @@ onQRCode("SC-77")     → unlockStep(3)</code></pre>
   <!-- FORMATS -->
   <section class="section alt" id="formats">
     <div class="container narrow">
-      <h2 class="section-title gold reveal">Durées, formats & cash prizes</h2>
+      <h2 class="section-title gold reveal">Formats & cash prizes</h2>
       <ul class="bullet-list reveal">
-        <li><b>Durée</b> : d’une journée à une année, saisons & classements possibles.</li>
-        <li><b>IRL</b> (ville, campus, événement) & <b>Informatique</b> (web, code, repo, headers).</li>
-        <li><b>Prizes</b> : montants variables selon la chasse & son règlement (anti-triche inclus).</li>
+        <li><b>IRL</b> : ville, campus, événements…</li>
+        <li><b>Digitaux</b> : indices dans le code, images, audio.</li>
+        <li>Durée : <b>1 jour à 1 an</b>.</li>
+        <li><b>Cash prizes</b> pour les meilleures chasses.</li>
       </ul>
     </div>
   </section>
@@ -188,9 +127,8 @@ onQRCode("SC-77")     → unlockStep(3)</code></pre>
   <section class="section" id="contact">
     <div class="container narrow">
       <h2 class="section-title gold reveal">Suis le projet</h2>
-      <p class="reveal">Teasers, alpha, démos & résultats.</p>
       <div class="cta-row reveal">
-        <a class="btn" href="mailto:contact@soclose.app">contact@soclose.app</a>
+        <a class="btn" href="mailto:contact@soclose.app">socloseink@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/soclose_ch/" target="_blank" rel="noopener">Instagram @soclose_ch</a>
       </div>
     </div>
