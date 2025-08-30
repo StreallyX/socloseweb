@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SoClose – Chasse au trésor digitale</title>
-  <meta name="description" content="SoClose : tu crées des chasses au trésor réelles ou informatiques. Tracking complet, replays cartographiques, moteur Triggers → Effects, cash prizes." />
+  <title>SoClose – Crée ta chasse au trésor</title>
+  <meta name="description" content="SoClose : des chasses IRL & informatiques. GPS, QR, gestes, audio, pages secrètes. Construis ton scénario et fais vibrer ta ville." />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Leaflet (démo carte & tracé) -->
+  <!-- Leaflet (cartes & démo studio) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
@@ -15,97 +14,127 @@
   <header class="site-header">
     <div class="container">
       <a class="brand" href="#top">
-        <img src="img/logo.png" alt="Logo SoClose" class="brand-logo" />
+        <img src="img/logo-nobg.png" alt="Logo SoClose" class="brand-logo" />
         <span class="brand-name">SoClose</span>
       </a>
       <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">☰</button>
       <nav class="site-nav" id="siteNav">
-        <a href="#createur">Créateur</a>
-        <a href="#fonctionnement">Fonctionnement</a>
+        <a href="#hero">Intro</a>
+        <a href="#creer">Créer ta chasse</a>
+        <a href="#studio">Studio (démo)</a>
+        <a href="#mecaniques">Mécaniques folles</a>
         <a href="#triggers">Triggers & Effects</a>
-        <a href="#replay">Replays & Carte</a>
-        <a href="#formats">Formats & Cash Prize</a>
-        <a href="#securite">Données</a>
+        <a href="#formats">Formats & Prizes</a>
         <a href="#contact" class="btn">Nous suivre</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="top">
+  <section class="hero" id="hero">
     <div class="container grid-2">
       <div class="hero-visual">
         <img src="img/logo-nobg.png" alt="Logo SoClose" class="hero-logo reveal" />
       </div>
       <div class="hero-copy">
-        <h1 class="reveal">La chasse au trésor, dans la vraie vie… et dans le code.</h1>
+        <h1 class="gold reveal">Tu imagines. Les autres vivent l’aventure.</h1>
         <p class="lead reveal">
-          <strong>SoClose</strong> est une application mobile et une plateforme d’édition :
-          <u>tu crées</u> des chasses (IRL ou informatiques), tu suis les joueurs en temps réel,
-          tu analyses leurs parcours, et tu offres des <b>cash prizes</b>.
+          <b>SoClose</b> est une chasse au trésor moderne : des zones GPS qui s’allument, des QR qui déverrouillent,
+          des <em>gestes</em> qui révèlent un son, des <em>sons</em> qui cachent un code… et des <b>pages secrètes</b> qui n’attendent que toi.
         </p>
         <div class="hero-cta reveal">
-          <a href="#createur" class="btn">Commencer</a>
-          <a href="#replay" class="btn btn-ghost">Voir la démo carte</a>
+          <a href="#creer" class="btn">Créer une chasse</a>
+          <a href="#studio" class="btn btn-ghost">Tester la carte</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CRÉATEUR / ADMIN -->
-  <section class="section" id="createur">
+  <!-- CREER TA CHASSE -->
+  <section class="section" id="creer">
     <div class="container narrow">
-      <h2 class="section-title reveal">Tu es le créateur & l’admin</h2>
+      <h2 class="section-title gold reveal">Comment on crée ? Simple et puissant.</h2>
       <div class="cards">
         <article class="card reveal">
-          <div class="icon">🧰</div>
-          <h3>Éditeur visuel</h3>
-          <p>Tu définis les étapes, zones GPS, indices, QR, règles et validations. Tout est modulable.</p>
+          <div class="icon">📍</div>
+          <h3>Place des zones</h3>
+          <p>Choisis des coordonnées GPS (lat/lng) et un rayon. Quand le joueur entre, <b>quelque chose se passe</b>.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">📊</div>
-          <h3>Tracking complet</h3>
-          <p>Progression, temps, scans, validations. Tu <b>vois tout</b> depuis le tableau de bord organisateur.</p>
+          <div class="icon">🧩</div>
+          <h3>Ajoute des indices</h3>
+          <p>Overlays de carte, QR à scanner, énigmes à saisir, timers… combine-les.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">🎞️</div>
-          <h3>Replays & exports</h3>
-          <p>Génère des cartes de parcours, traces, stats, et vidéos récap à partir des données.</p>
+          <div class="icon">🌀</div>
+          <h3>Déclenche par des gestes</h3>
+          <p>Secoue le téléphone → un son joue. Dans le son : un <b>code</b> à trouver (spectrogramme, morse, DTMF).</p>
         </article>
         <article class="card reveal">
-          <div class="icon">🛠️</div>
-          <h3>API & automatisations</h3>
-          <p>Connecte tes outils, webhooks, ou scripts pour des scénarios avancés.</p>
+          <div class="icon">🔒</div>
+          <h3>Déverrouille des secrets</h3>
+          <p>Le code ouvre une <b>page secrète</b> de SoClose. Et là, nouvelle étape… ou jackpot 💰.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- FONCTIONNEMENT -->
-  <section class="section alt" id="fonctionnement">
+  <!-- STUDIO DEMO -->
+  <section class="section alt" id="studio">
     <div class="container">
-      <h2 class="section-title reveal">Comment ça marche (côté joueur) ?</h2>
-      <div class="steps">
-        <div class="step reveal">
-          <span class="step-n">1</span>
-          <h3>Autorise la localisation & la caméra</h3>
-          <p>La boussole et les zones GPS guident le joueur ; la caméra sert aux QR codes.</p>
+      <h2 class="section-title gold reveal">Studio SoClose (démo) — Trace, mesure, imagine</h2>
+      <div class="studio-grid">
+        <div class="studio-controls reveal">
+          <label>Lat</label>
+          <input id="lat" type="number" step="0.000001" placeholder="48.858370">
+          <label>Lng</label>
+          <input id="lng" type="number" step="0.000001" placeholder="2.294481">
+          <label>Rayon (m)</label>
+          <input id="radius" type="number" step="1" placeholder="60">
+          <div class="studio-buttons">
+            <button id="addZone" class="btn">+ Zone</button>
+            <button id="addPoint" class="btn btn-ghost">+ Point (chemin)</button>
+            <button id="clear" class="btn btn-ghost">Effacer</button>
+          </div>
+          <div class="metrics">
+            <div><span class="m-label">Zones</span><span class="m-val" id="mZones">0</span></div>
+            <div><span class="m-label">Points</span><span class="m-val" id="mPts">0</span></div>
+            <div><span class="m-label">Distance</span><span class="m-val" id="mDist">0 km</span></div>
+          </div>
+          <p class="hint">Pose une zone (ex: Tour Eiffel) puis des points pour imaginer un trajet.<br/>Tout ça devient une étape SoClose.</p>
         </div>
-        <div class="step reveal">
-          <span class="step-n">2</span>
-          <h3>Suis la boussole / ouvre la carte</h3>
-          <p>Quand le joueur entre dans une zone, un indice, un overlay ou un défi apparaît.</p>
+        <div class="studio-map reveal">
+          <div id="studioMap"></div>
         </div>
-        <div class="step reveal">
-          <span class="step-n">3</span>
-          <h3>Déclenche des actions</h3>
-          <p>Scans, réponses, ouverture d’outils… tout peut déclencher un effet immédiat.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-n">4</span>
-          <h3>Valide & progresse</h3>
-          <p>Chaque validation débloque l’étape suivante jusqu’au trésor final.</p>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MECANIQUES FOLLES -->
+  <section class="section" id="mecaniques">
+    <div class="container narrow">
+      <h2 class="section-title gold reveal">Ce n’est pas “juste une boussole”</h2>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="icon">🔊</div>
+          <h3>Son → Code</h3>
+          <p>Un jingle cache un message. Analyse-le et entre le code sur une page secrète pour continuer.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🖼️</div>
+          <h3>Stéganographie</h3>
+          <p>Indices dans les images (EXIF/LSB), dans les headers réseau, voire… dans le manifest.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🎮</div>
+          <h3>Combo d’actions</h3>
+          <p>Secousse + QR + heure précise = révélation instantanée. À toi d’inventer la recette.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">💻</div>
+          <h3>Chasse informatique</h3>
+          <p>Indices dans le code source, un repo Git, un binaire… L’aventure peut être 100% digitale.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -113,87 +142,44 @@
   <!-- TRIGGERS & EFFECTS -->
   <section class="section" id="triggers">
     <div class="container narrow">
-      <h2 class="section-title reveal">Moteur Triggers → Effects</h2>
-      <p class="reveal">
-        Chaque règle associe un <em>Trigger</em> (déclencheur) à un ou plusieurs <em>Effects</em> (réactions).
-        C’est la logique qui relie les actions du joueur aux réactions de l’app.
-      </p>
-
+      <h2 class="section-title gold reveal">Triggers → Effects (l’étincelle du jeu)</h2>
+      <p class="reveal">Une règle relie un <em>Trigger</em> (déclencheur) à un ou plusieurs <em>Effects</em> (réactions).</p>
       <div class="rules-grid">
         <div class="rule-card reveal">
-          <h3>Exemples de Triggers</h3>
+          <h3>Triggers</h3>
           <ul>
-            <li><b>onLocation</b> : entrée dans une zone, distance &lt; X m, cap vers un point</li>
-            <li><b>onQRCode</b> : scan d’un code précis (ex. <code>SC-42</code>)</li>
-            <li><b>onToolOpen</b> : ouverture de la boussole, carte, QR, audio…</li>
-            <li><b>onInput</b> : bonne réponse à une énigme</li>
-            <li><b>onTime</b> : timer atteint, période journalière, deadline</li>
+            <li><b>onLocation</b> (entrée zone, distance &lt; X m, cap exact)</li>
+            <li><b>onQRCode</b>, <b>onInput</b>, <b>onTime</b></li>
+            <li><b>onShake</b> (secousse), <b>onToolOpen</b> (boussole/carte/QR/audio)</li>
+            <li><b>onAudio</b> (analyse/validation d’un motif sonore)</li>
           </ul>
         </div>
         <div class="rule-card reveal">
-          <h3>Exemples d’Effects</h3>
+          <h3>Effects</h3>
           <ul>
             <li><b>showOverlay</b> (indice image sur la carte)</li>
-            <li><b>activateTool</b> (autoriser carte/QR/audio…)</li>
-            <li><b>changeColorCompass</b> (feedback visuel immédiat)</li>
-            <li><b>unlockStep / playAudio</b> (progresser, jouer un son)</li>
-            <li><b>award</b> (points, bonus, ticket cash prize)</li>
+            <li><b>activateTool</b>, <b>playAudio</b>, <b>changeColorCompass</b></li>
+            <li><b>unlockStep</b>, <b>award</b>, <b>openSecretPage</b></li>
           </ul>
         </div>
       </div>
-
       <div class="rule-example reveal">
-        <h3>Mini-schéma</h3>
-        <pre><code>onLocation(Zone A)     → showOverlay("Indice #1")
-onQRCode("SC-42")     → activateTool("Map"), unlockStep(2)
-onToolOpen("Compass") → changeColorCompass("#E8C68E")</code></pre>
+        <pre><code>onShake()             → playAudio("hint.wav")
+onAudio("spectre42")  → openSecretPage("/secret?key=42")
+onLocation(Zone A)    → showOverlay("indice.png")
+onQRCode("SC-77")     → unlockStep(3)</code></pre>
       </div>
     </div>
   </section>
 
-  <!-- REPLAYS / CARTE / CALCULS -->
-  <section class="section alt" id="replay">
+  <!-- FORMATS -->
+  <section class="section alt" id="formats">
     <div class="container narrow">
-      <h2 class="section-title reveal">Replays cartographiques & calculs</h2>
-      <p class="reveal">
-        L’admin peut <b>ouvrir une carte, tracer les lignes</b> (polylines), <b>calculer des distances</b>,
-        vitesses moyennes, zones atteintes, temps d’étape, et générer des vidéos récap.
-      </p>
-
-      <div class="map-wrap reveal">
-        <div id="demoMap"></div>
-        <div class="metrics">
-          <div><span class="m-label">Distance totale</span><span class="m-val" id="mDist">–</span></div>
-          <div><span class="m-label">Segments</span><span class="m-val" id="mSeg">–</span></div>
-        </div>
-        <p class="hint">Démo statique avec un parcours d’exemple (Leaflet + polyline + calcul Haversine).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMATS / CASH PRIZES -->
-  <section class="section" id="formats">
-    <div class="container narrow">
-      <h2 class="section-title reveal">Formats de chasses & cash prizes</h2>
+      <h2 class="section-title gold reveal">Durées, formats & cash prizes</h2>
       <ul class="bullet-list reveal">
-        <li><b>IRL</b> : en ville, campus, parc, événement…</li>
-        <li><b>Informatique</b> : indices cachés dans le <em>code source</em>, dépôt Git, headers HTTP, binaires…</li>
-        <li><b>Durée</b> : de <b>1 jour</b> à <b>1 an</b>, en solo ou en équipes.</li>
-        <li><b>Cash prizes</b> : montants variables selon la chasse et ses règles (conditions & règlement fournis).</li>
-        <li><b>Tout est faisable</b> : mécaniques sur-mesure via le moteur de règles + outils avancés.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- DONNÉES & CONFIDENTIALITÉ -->
-  <section class="section alt" id="securite">
-    <div class="container narrow">
-      <h2 class="section-title reveal">Données, permissions & transparence</h2>
-      <ul class="bullet-list reveal">
-        <li><b>Collecte</b> : localisation, scans, temps et interactions sont <b>suivis</b> pendant la chasse.</li>
-        <li><b>Accès admin</b> : l’organisateur <u>voit les parcours et actions</u> de ses joueurs pour gérer la chasse et produire des replays.</li>
-        <li><b>Consentement</b> : permissions explicites (localisation/caméra). Mode opt-in, désactivation possible.</li>
-        <li><b>Conservation</b> : durée limitée et proportionnée aux besoins de la chasse ; anonymisation possible pour les stats.</li>
+        <li><b>Durée</b> : d’une journée à une année, saisons & classements possibles.</li>
+        <li><b>IRL</b> (ville, campus, événement) & <b>Informatique</b> (web, code, repo, headers).</li>
+        <li><b>Prizes</b> : montants variables selon la chasse & son règlement (anti-triche inclus).</li>
       </ul>
     </div>
   </section>
@@ -201,12 +187,11 @@ onToolOpen("Compass") → changeColorCompass("#E8C68E")</code></pre>
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container narrow">
-      <h2 class="section-title reveal">Suivre le projet</h2>
-      <p class="reveal">SoClose est en développement actif. Abonne-toi pour les annonces (alpha, démos, inscriptions bêta).</p>
+      <h2 class="section-title gold reveal">Suis le projet</h2>
+      <p class="reveal">Teasers, alpha, démos & résultats.</p>
       <div class="cta-row reveal">
         <a class="btn" href="mailto:contact@soclose.app">contact@soclose.app</a>
-        <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="#" aria-disabled="true">Instagram (bientôt)</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/soclose_ch/" target="_blank" rel="noopener">Instagram @soclose_ch</a>
       </div>
     </div>
   </section>
